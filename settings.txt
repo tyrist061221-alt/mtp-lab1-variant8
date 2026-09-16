@@ -1,0 +1,2 @@
+mode = main
+version = 1
