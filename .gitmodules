@@ -1,0 +1,3 @@
+[submodule "libs/libmath"]
+	path = libs/libmath
+	url = https://github.com/USERNAME/mtp-lab1-libmath.git
