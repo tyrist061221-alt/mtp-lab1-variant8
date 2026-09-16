@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Git hook: проверка Python-кода через flake8 перед коммитом.
+# Включается командой: git config core.hooksPath .githooks
+set -e
+
+echo "pre-commit: проверка кода через flake8..."
+
+if ! command -v flake8 >/dev/null 2>&1; then
+    echo "pre-commit: flake8 не установлен, проверка пропущена (pip install flake8)"
+    exit 0
+fi
+
+flake8 . --max-line-length=100 --exclude=.git,__pycache__,libs
+echo "pre-commit: проверка пройдена, коммит разрешён"
