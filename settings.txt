@@ -1,2 +1,2 @@
-mode = main
+mode = main+feature
 version = 1
